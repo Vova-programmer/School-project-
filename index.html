@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamPath BizPlan</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Georgia, serif;
+  background:#0A0A0F;
+  color:#E8E8F0;
+}
+
+.wrapper {
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+.container {
+  max-width:960px;
+  margin:0 auto;
+  padding:40px 24px;
+}
+
+.hero {
+  background: linear-gradient(135deg,#0A0A0F 0%, #12001A 50%, #0A0A0F 100%);
+  border-bottom:1px solid #2A2A3A;
+  padding:48px 32px;
+  position:relative;
+}
+
+.badge {
+  display:inline-block;
+  background:rgba(255,87,51,0.12);
+  border:1px solid rgba(255,87,51,0.3);
+  padding:4px 12px;
+  font-size:11px;
+  color:#FF5733;
+  margin-bottom:20px;
+  letter-spacing:0.15em;
+}
+
+h1 {
+  font-size:56px;
+  margin:0 0 12px;
+}
+
+h2 {
+  font-size:28px;
+  margin-bottom:8px;
+}
+
+p { color:#A0A0B8; }
+
+.nav {
+  border-bottom:1px solid #2A2A3A;
+  background:#0D0D14;
+  display:flex;
+  overflow:auto;
+}
+
+.nav button {
+  background:none;
+  border:none;
+  color:#6B6B80;
+  padding:14px 16px;
+  cursor:pointer;
+}
+
+.nav button.active {
+  color:#FF5733;
+  border-bottom:2px solid #FF5733;
+}
+
+.card {
+  background:#13131A;
+  border:1px solid #2A2A3A;
+  border-radius:10px;
+  padding:24px;
+  margin-bottom:16px;
+}
+
+.highlight {
+  border:1px solid rgba(255,87,51,0.35);
+  box-shadow:0 0 24px rgba(255,87,51,0.06);
+}
+
+.grid {
+  display:grid;
+  gap:16px;
+}
+
+.grid-2 { grid-template-columns:repeat(2,1fr); }
+.grid-3 { grid-template-columns:repeat(3,1fr); }
+
+.tag {
+  display:inline-block;
+  padding:2px 10px;
+  border-radius:4px;
+  border:1px solid rgba(255,87,51,0.4);
+  margin:4px;
+  font-size:12px;
+  color:#FF5733;
+}
+
+.hidden { display:none; }
+
+.small { font-size:13px; color:#6B6B80; }
+.white { color:#fff; }
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="badge">Бизнес-план · v1.0 · Конфиденциально</div>
+    <h1><span class="white">EXAM</span><span style="color:#FF5733">PATH</span></h1>
+    <p style="max-width:600px;">
+      Образовательная экосистема нового поколения — подготовка к ОГЭ/ЕГЭ, менторство, курсы по профессиям и умный ВУЗ-навигатор в одном приложении.
+    </p>
+
+    <div style="margin-top:20px;">
+      🎯 Школьники 8–11 кл. · 👨‍🏫 Репетиторы · 🏛️ Абитуриенты · 💼 Курсы
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav" id="nav"></div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<!-- OVERVIEW -->
+<div id="overview" class="section">
+<h2>О продукте</h2>
+
+<div class="card highlight">
+<strong class="white">ExamPath</strong> — единая образовательная платформа (сайт + приложение),
+объединяющая подготовку к экзаменам, курсы, репетиторов и ВУЗ-навигатор.
+</div>
+
+<div class="grid grid-3">
+<div class="card"><div style="font-size:36px;color:#FF5733;">14M+</div><div class="small">школьников</div></div>
+<div class="card"><div style="font-size:36px;color:#FF5733;">800K+</div><div class="small">ЕГЭ ежегодно</div></div>
+<div class="card"><div style="font-size:36px;color:#FF5733;">₽280B</div><div class="small">рынок EdTech</div></div>
+</div>
+
+<div class="card">
+<div class="white">Целевые аудитории</div>
+<div class="small">Школьники, абитуриенты, репетиторы, родители</div>
+</div>
+</div>
+
+<!-- PROBLEM -->
+<div id="problem" class="section hidden">
+<h2>Проблема & Решение</h2>
+
+<div class="card">
+<div class="white">Фрагментация</div>
+<div class="small">Нет единой системы</div>
+</div>
+
+<div class="card highlight">
+Одна платформа закрывает весь путь ученика
+</div>
+</div>
+
+<!-- BOTTLENECK -->
+<div id="bottleneck" class="section hidden">
+<h2>Узкое горлышко</h2>
+
+<div class="card">
+<div class="white">Проблема курицы и яйца</div>
+<div class="small">Нет пользователей → нет репетиторов</div>
+</div>
+
+<div class="card">
+<div class="white">Качество контента</div>
+<div class="small">Нужна модерация</div>
+</div>
+</div>
+
+<!-- FEATURES -->
+<div id="features" class="section hidden">
+<h2>Функционал</h2>
+
+<div class="grid grid-2">
+<div class="card">📝 Тесты ЕГЭ</div>
+<div class="card">📚 Курсы</div>
+<div class="card">👨‍🏫 Репетиторы</div>
+<div class="card">🤖 AI</div>
+<div class="card">🎓 Профкурсы</div>
+<div class="card">🤝 Менторы</div>
+</div>
+</div>
+
+<!-- UNIVERSITY -->
+<div id="university" class="section hidden">
+<h2>ВУЗ-калькулятор</h2>
+
+<div class="card highlight">
+Показывает куда поступишь по баллам
+</div>
+
+<div class="card">
+Фильтры, проходные баллы, шанс поступления
+</div>
+</div>
+
+<!-- MONETIZATION -->
+<div id="monetization" class="section hidden">
+<h2>Монетизация</h2>
+
+<div class="grid grid-2">
+<div class="card">💳 Подписка</div>
+<div class="card">🤝 Комиссия</div>
+<div class="card">🏫 B2B</div>
+<div class="card">📣 Реклама</div>
+</div>
+
+<div class="card highlight">
+ARR: ₽37M
+</div>
+</div>
+
+<!-- COMPETITORS -->
+<div id="competitors" class="section hidden">
+<h2>Конкуренты</h2>
+
+<div class="card">Решу ЕГЭ</div>
+<div class="card">Яндекс.Репетитор</div>
+<div class="card">Skysmart</div>
+<div class="card">Stepik</div>
+</div>
+
+<!-- SEO -->
+<div id="seo" class="section hidden">
+<h2>SEO-стратегия</h2>
+
+<div class="card highlight">
+1M+ органического трафика
+</div>
+
+<div class="card">
+SEO страницы под каждый запрос
+</div>
+</div>
+
+<!-- IDEAS -->
+<div id="ideas" class="section hidden">
+<h2>Мощные идеи</h2>
+
+<div class="card">AI план подготовки</div>
+<div class="card">Leaderboard</div>
+<div class="card">Live уроки</div>
+</div>
+
+<!-- ROADMAP -->
+<div id="roadmap" class="section hidden">
+<h2>Роадмап</h2>
+
+<div class="card">MVP → Маркетплейс → Экосистема → Масштаб</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+const sections = [
+"id=overview","problem","bottleneck","features",
+"university","monetization","competitors","seo","ideas","roadmap"
+];
+
+const labels = [
+"О продукте","Проблема","Узкое горлышко","Функционал",
+"ВУЗ","Монетизация","Конкуренты","SEO","Идеи","Роадмап"
+];
+
+const nav = document.getElementById("nav");
+
+labels.forEach((label,i)=>{
+  const id = ["overview","problem","bottleneck","features","university","monetization","competitors","seo","ideas","roadmap"][i];
+
+  const btn = document.createElement("button");
+  btn.innerText = label;
+
+  if(i===0) btn.classList.add("active");
+
+  btn.onclick = () => {
+    document.querySelectorAll(".section").forEach(s=>s.classList.add("hidden"));
+    document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));
+
+    document.getElementById(id).classList.remove("hidden");
+    btn.classList.add("active");
+  };
+
+  nav.appendChild(btn);
+});
+</script>
+
+</body>
+</html>
